@@ -6,7 +6,6 @@ public class Doctor extends Person {
     Date enumerationDate;
     String[] languagesSpoke;
     String[] specialization;
-    String primaryAddress;
     String secondaryAddress;
     String[] acceptedInsurance;
     boolean newPatients;
@@ -20,12 +19,11 @@ public class Doctor extends Person {
         Date enumerationDate, String[] languagesSpoke, String[] specialization, String primaryAddress, 
         String secondaryAddress, String[] acceptedInsurance, boolean newPatients, String URL, 
         String primaryPhone, String secondaryPhone, float reviewAvg){
-        super(firstName, middleInitial, lastName, age, sex);
+        super(firstName, middleInitial, lastName, age, sex, primaryAddress);
         this.NPI = NPI;
         this.enumerationDate = enumerationDate;
         this.languagesSpoke = languagesSpoke;
         this.specialization = specialization;
-        this.primaryAddress = primaryAddress;
         this.secondaryAddress = secondaryAddress;
         this.acceptedInsurance = acceptedInsurance;
         this.newPatients = newPatients;
@@ -74,16 +72,6 @@ public class Doctor extends Person {
 
     public void setSpecialization(String[] specialization) {
         this.specialization = specialization;
-    }
-
-
-    public String getPrimaryAddress() {
-        return primaryAddress;
-    }
-
-
-    public void setPrimaryAddress(String primaryAddress) {
-        this.primaryAddress = primaryAddress;
     }
 
 
