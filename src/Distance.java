@@ -1,5 +1,5 @@
 package src;
-
+// This whole file is a iteration 2 kind of problem
 public class Distance {
     String patientZip;
     String doctorZip;
