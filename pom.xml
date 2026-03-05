@@ -1,0 +1,13 @@
+<dependencies>
+    <dependency>
+        <groupId>ca.uhn.hapi.fhir</groupId>
+        <artifactId>hapi-fhir-base</artifactId>
+        <version>6.6.0</version>
+    </dependency>
+    <dependency>
+        <groupId>ca.uhn.hapi.fhir</groupId>
+        <artifactId>hapi-fhir-structures-r4</artifactId>
+        <version>6.6.0</version>
+    </dependency>
+</dependencies>
+`
