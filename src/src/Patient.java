@@ -1,4 +1,4 @@
-package src;
+package src.src;
 public class Patient extends Person {
     String insurance;
     String password;
