@@ -1,4 +1,3 @@
-package src.src;
 public class Person {
     private String firstName;
     private char middleInitial;

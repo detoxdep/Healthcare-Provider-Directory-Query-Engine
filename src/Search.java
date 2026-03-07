@@ -1,4 +1,3 @@
-package src.src;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +13,6 @@ public class Search {
     public static ArrayList<Doctor> filteredSearch = new ArrayList<>();
 
     public static ArrayList<Doctor> search(){
-       
 
         Path fileName = Paths.get("random_doctors_florida_zipcodes.csv");
 

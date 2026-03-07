@@ -1,4 +1,3 @@
-package src.src;
 import java.util.Date;
 
 public class Doctor extends Person {
