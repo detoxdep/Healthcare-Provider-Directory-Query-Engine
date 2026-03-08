@@ -1,1 +1,2 @@
-firstName,middleInitial,lastName,age,sex,primaryAddress,NPI,enumerationDate,languagesSpoke,specialization,secondaryAddress,acceptedInsurance,newPatients,URL,primaryPhone,secondaryPhone,reviewAvg
+firstName,middleInitial,lastName,age,sex,primaryAddress,NPI,enumerationDate,languagesSpoke,specialization,secondaryAddress,acceptedInsurance,newPatients,URL,primaryPhone,secondaryPhone,reviewAvg, provider
+
