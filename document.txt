@@ -1,0 +1,69 @@
+CEN4010 – Iteration 1 Submission: System Implementation & Documentation Team: G19 Date: March 2026
+
+I. SYSTEM OVERVIEW & FEATURES (10 Points)
+The following features have been implemented and verified for Iteration 1:
+
+1. Physician Dataset Integration: The system successfully loads and parses a local CSV database (random_doctors_florida_zipcodes.csv) containing 100+ fictional physician records.
+
+2. Automated Data Tokenization: The Search class implements a complex Regex-based parser to handle CSV fields, including those with internal commas and semicolon-separated lists (e.g., specializations and accepted insurance).
+
+3. User Profile Management: Users can create and manage a Patient profile. This includes storing contact information, account passwords, and primary insurance providers.
+
+4. Insurance-Based Filtering: A core search function allows the system to filter the doctor database based on the patient's insurance provider, ensuring only compatible results are returned.
+
+5. Location Data Extraction: The system automatically extracts 5-digit ZIP codes from full address strings, providing the necessary groundwork for Iteration 2’s proximity-based search.
+
+II. DESIGN QUALITY (3 Points)
+The system follows Object-Oriented Programming (OOP) best practices to ensure scalability and maintainability.
+
+Class Hierarchy (Inheritance): We identified common attributes (Name, Age, Sex, Address) and placed them in a base Person class. The Doctor and Patient classes inherit from Person, reducing code redundancy and allowing for polymorphism.
+
+Encapsulation: Attributes are declared as private to protect data integrity. Access is managed through public Getter and Setter methods.
+
+Modular Responsibility:
+
+Search.java: Dedicated exclusively to File I/O and data filtering.
+
+Distance.java: Dedicated to coordinate and distance math.
+
+Main.java: Handles the UI/Terminal interaction and menu flow.
+
+III. PROGRAMMING STYLE (2 Points)
+Naming Conventions: All variables, methods, and classes follow standard Java camelCase and PascalCase conventions (e.g., primaryAddress, testDoctor, getZip).
+
+Appropriate Method Length: Methods are kept concise. For example, the getZip logic is isolated into a single-purpose method, and the search loop is streamlined to handle parsing and object instantiation in under 40 lines of code.
+
+Readability: Proper indentation and clear comments are used throughout the source code to explain complex logic, such as the Regex string used for CSV tokenization.
+
+IV. INSTRUCTIONS: HOW TO RUN THE SYSTEM
+1. Prerequisites
+
+Ensure Java Development Kit (JDK) 11 or higher is installed.
+
+Place random_doctors_florida_zipcodes.csv in the project root directory.
+
+2. Compilation Open your terminal/command prompt in the project folder and run: javac *.java
+
+3. Running the Application To launch the interactive menu, run: java Main
+
+4. Running Unit Tests To verify the system implementation via the JUnit test suite:
+
+Open the project in an IDE (e.g., VS Code, IntelliJ, or Eclipse).
+
+Navigate to the test package.
+
+Execute testDoctor.java, testPatient.java, testPerson.java, or testSearch.java.
+
+V. TEST CASE TRACEABILITY
+To ensure every file has a corresponding test (as per requirements):
+
+testPerson.java: Validates ZIP extraction and base attributes.
+
+testDoctor.java: Validates inheritance and complex array storage.
+
+testPatient.java: Validates profile updates and password storage.
+
+testSearch.java: Validates CSV loading and dataset size requirements.
+
+testDistance.java: Validates object initialization for Iteration 2.
+
