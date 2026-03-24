@@ -1,3 +1,4 @@
+package com.example;
 public class Patient extends Person {
     String insurance;
     String password;

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="213.0" layoutY="14.0" text="Create Account">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="65.0" prefHeight="18.0" prefWidth="78.0" text="First Name" />
+      <Label layoutX="13.0" layoutY="134.0" prefHeight="18.0" prefWidth="78.0" text="Last Name" />
+      <Label layoutX="13.0" layoutY="102.0" prefHeight="18.0" prefWidth="78.0" text="Middle Initial" />
+      <TextField layoutX="95.0" layoutY="62.0" />
+      <TextField layoutX="95.0" layoutY="97.0" prefHeight="26.0" prefWidth="33.0" />
+      <TextField layoutX="96.0" layoutY="131.0" />
+      <Label layoutX="267.0" layoutY="62.0" prefHeight="18.0" prefWidth="51.0" text="Age" />
+      <Spinner layoutX="326.0" layoutY="58.0" prefHeight="26.0" prefWidth="58.0" />
+      <Label layoutX="267.0" layoutY="93.0" prefHeight="18.0" prefWidth="51.0" text="Sex" />
+      <Spinner layoutX="326.0" layoutY="89.0" prefHeight="26.0" prefWidth="58.0" />
+      <Spinner layoutX="363.0" layoutY="130.0" />
+      <Label layoutX="259.0" layoutY="135.0" text="Insurance" />
+      <Label layoutX="14.0" layoutY="165.0" text="Address Line 1" />
+      <Label layoutX="14.0" layoutY="195.0" text="Address Line 2" />
+      <TextField layoutX="96.0" layoutY="161.0" />
+      <TextField layoutX="95.0" layoutY="191.0" />
+      <Label layoutX="13.0" layoutY="227.0" prefHeight="18.0" prefWidth="78.0" text="City" />
+      <TextField layoutX="94.0" layoutY="223.0" />
+      <Label layoutX="13.0" layoutY="259.0" prefHeight="18.0" prefWidth="78.0" text="State" />
+      <TextField layoutX="94.0" layoutY="255.0" />
+      <Label layoutX="260.0" layoutY="227.0" prefHeight="18.0" prefWidth="90.0" text="Enter Password" />
+      <Label layoutX="260.0" layoutY="259.0" text="Repeat Password" />
+      <PasswordField layoutX="363.0" layoutY="223.0" />
+      <PasswordField layoutX="363.0" layoutY="255.0" />
+      <Label layoutX="259.0" layoutY="194.0" prefHeight="18.0" prefWidth="90.0" text="User  Name" />
+      <TextField layoutX="363.0" layoutY="191.0" />
+      <Label layoutX="260.0" layoutY="164.0" prefHeight="18.0" prefWidth="90.0" text="Email" />
+      <TextField layoutX="363.0" layoutY="161.0" />
+   </children>
+</AnchorPane>

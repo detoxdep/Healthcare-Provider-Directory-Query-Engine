@@ -1,8 +1,11 @@
+package com.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+
+
+public class main {
+    public static void Main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
         boolean flag = true;
@@ -86,6 +89,7 @@ public class Main {
 
 
         }
+        scn.close();
 
     }
 }
