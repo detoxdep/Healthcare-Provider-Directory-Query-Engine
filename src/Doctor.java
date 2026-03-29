@@ -1,4 +1,3 @@
-package src;
 import java.util.Date;
 
 public class Doctor extends Person {
@@ -143,6 +142,29 @@ public class Doctor extends Person {
     public void setReviewAvg(float reviewAvg) {
         this.reviewAvg = reviewAvg;
     }
+    
+    @Override
+    public String toString() {
+    return "Doctor{" +
+            "firstName='" + getFirstName() + '\'' +
+            ", middleInitial=" + getMiddleInitial() +
+            ", lastName='" + getLastName() + '\'' +
+            ", age=" + getAge() +
+            ", sex=" + getSex() +
+            ", NPI='" + NPI + '\'' +
+            ", enumerationDate=" + enumerationDate +
+            ", languagesSpoke=" + String.join(";", languagesSpoke) +
+            ", specialization=" + String.join(";", specialization) +
+            ", primaryAddress='" + getPrimaryAddress() + '\'' +
+            ", secondaryAddress='" + secondaryAddress + '\'' +
+            ", acceptedInsurance=" + String.join(";", acceptedInsurance) +
+            ", newPatients=" + newPatients +
+            ", URL='" + URL + '\'' +
+            ", primaryPhone='" + primaryPhone + '\'' +
+            ", secondaryPhone='" + secondaryPhone + '\'' +
+            ", reviewAvg=" + reviewAvg +
+            '}';
+}
     
    
 }

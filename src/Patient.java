@@ -1,4 +1,3 @@
-package src;
 public class Patient extends Person {
     String insurance;
     String password;

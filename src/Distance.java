@@ -1,4 +1,3 @@
-package src;
 // This whole file is a iteration 2 kind of problem
 public class Distance {
     String patientZip;
@@ -10,13 +9,14 @@ public class Distance {
 
         
     }
-
+/**
  public int[] convertLatLong(String zipCode){
         int[] latLong;
         // Use Comma separated file of zip codes in florida 
         // Return int array of two containing latitude and longitude
         return latLong;
     }
+ **/
    
 
  public int Haversine(int[] latLongPatient, int[] latLongDoctor){

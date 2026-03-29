@@ -3,7 +3,7 @@ package test;
 import static org.junit.Assert.*;
 import org.junit.Test;
 // Importing the Patient class to verify profile and insurance logic
-import Patient; 
+//import Patient; 
 
 public class testPatient {
 

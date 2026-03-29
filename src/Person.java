@@ -1,4 +1,3 @@
-package src;
 public class Person {
     private String firstName;
     private char middleInitial;
@@ -54,8 +53,9 @@ public String getPrimaryAddress() {
 public void setPrimaryAddress(String primaryAddress) {
     this.primaryAddress = primaryAddress;
 }
-public void getZip(String address){
-        //strip address and convert zip to int
+public int getZip(String address){
+    String zipToken = address.replaceAll("\"", "").trim();   
+return Integer.parseInt(zipToken.replaceAll(".*?(\\d{5}).*$", "$1"));  
     }
 
 
