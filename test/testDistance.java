@@ -1,9 +1,8 @@
-package test;
-
 import static org.junit.Assert.*;
 import org.junit.Test;
-// Importing the Person class to test the zip extraction used for distance
-import Person; 
+
+// NO PACKAGE LINE HERE
+// NO IMPORT PERSON OR DISTANCE HERE
 
 public class testDistance {
 
@@ -16,26 +15,31 @@ public class testDistance {
     public void testZipExtraction() {
         // Sample address from your random_doctors_florida_zipcodes.csv
         String address = "4126 Washington Ave, Pensacola, FL 34205";
-        
+
         // Creating a temporary person object to access the getZip logic
+        // This assumes your Person constructor takes (String, char, String, int, char, String)
         Person testPerson = new Person("Test", 'T', "User", 30, 'M', address);
-        
+
         int expectedZip = 34205;
         int actualZip = testPerson.getZip(address);
-        
-        assertEquals("The ZIP code should be extracted correctly from the address string.", 
+
+        assertEquals("The ZIP code should be extracted correctly from the address string.",
                      expectedZip, actualZip);
     }
 
     @Test
     public void testDistancePlaceholder() {
-        // Placeholder for Iteration 2 Haversine logic
-        // Once Distance.java is implemented, tests for miles calculation go here
+        // Testing the new Distance class logic
         String patientZip = "32505";
         String doctorZip = "34205";
-        
-        Distance dist = new Distance(patientZip, doctorZip);
-        assertNotNull("Distance object should be instantiable for Iteration 2.", dist);
-    }
-}package test;
 
+        Distance dist = new Distance(patientZip, doctorZip);
+        
+        // Now that we built Distance.java, we can check if it exists
+        assertNotNull("Distance object should be instantiable.", dist);
+        
+        // Optional: Test the calculation we just built
+        double miles = dist.calculateHaversine();
+        assertTrue("Distance should be a positive number", miles >= 0);
+    }
+}
