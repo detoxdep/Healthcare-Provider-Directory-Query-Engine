@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.6.6">
+  <diagram id="8_6Sa3z7KwCgmnHwuxP4" name="Page-1">
+    <mxGraphModel dx="931" dy="1323" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Person" vertex="1">
+          <mxGeometry height="320" width="170" x="563" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-2" parent="TLL_v9ClbD_YXBTvD8V5-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="firstName : String&lt;div&gt;middleInitial : char&lt;/div&gt;&lt;div&gt;lastName : String&lt;br&gt;&lt;div&gt;age : int&lt;/div&gt;&lt;div&gt;sex : char&lt;/div&gt;&lt;div&gt;primaryAddress : String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="170" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-3" parent="TLL_v9ClbD_YXBTvD8V5-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="170" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-4" parent="TLL_v9ClbD_YXBTvD8V5-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="setFirstName() : void&lt;div&gt;setMiddleInitial() : void&lt;br&gt;&lt;div&gt;setLastName() : void&lt;br&gt;&lt;div&gt;setAge() : void&lt;/div&gt;&lt;div&gt;setSex() : void&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;getFirstName() : String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;getMiddleInitial() : char&lt;/span&gt;&lt;/div&gt;&lt;div&gt;getLastName() : String&lt;/div&gt;&lt;div&gt;getAge() : int&lt;/div&gt;&lt;div&gt;getSex() : char&lt;/div&gt;&lt;div&gt;setPrimaryAddress() : void&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;getPrimaryAddress() : String&lt;/div&gt;&lt;div&gt;getZip() : int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="192" width="170" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-5" edge="1" parent="1" source="TLL_v9ClbD_YXBTvD8V5-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="TLL_v9ClbD_YXBTvD8V5-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Patient" vertex="1">
+          <mxGeometry height="150" width="160" x="282" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-7" parent="TLL_v9ClbD_YXBTvD8V5-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;insurance : String&lt;/div&gt;&lt;div&gt;address: String&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-8" parent="TLL_v9ClbD_YXBTvD8V5-6" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-9" parent="TLL_v9ClbD_YXBTvD8V5-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="setInsurance() : void&lt;div&gt;setAddress() : void&lt;/div&gt;&lt;div&gt;&lt;div&gt;getInsurance() : String&lt;/div&gt;&lt;div&gt;getAddress() : String&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="160" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-10" edge="1" parent="1" source="TLL_v9ClbD_YXBTvD8V5-11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="TLL_v9ClbD_YXBTvD8V5-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Doctor" vertex="1">
+          <mxGeometry height="540" width="180" x="842" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-12" parent="TLL_v9ClbD_YXBTvD8V5-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;NPI : String&lt;/div&gt;&lt;div&gt;enumerationDate : Date&lt;/div&gt;&lt;div&gt;languagesSpoke : String[]&lt;/div&gt;&lt;div&gt;&lt;div&gt;specialization : String[]&lt;/div&gt;&lt;/div&gt;&lt;div&gt;secondaryAddress : String&lt;/div&gt;&lt;div&gt;acceptedInsurance : String[]&lt;/div&gt;&lt;div&gt;newPatients : boolean&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;URL : String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;primaryPhone : String&lt;/div&gt;&lt;div&gt;secondaryPhone : String&lt;/div&gt;&lt;div&gt;reviewAvg : float&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="184" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-13" parent="TLL_v9ClbD_YXBTvD8V5-11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="20" width="180" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-14" parent="TLL_v9ClbD_YXBTvD8V5-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;setNPI() : void&lt;/div&gt;&lt;div&gt;setEnumerationDate() : void&lt;/div&gt;&lt;div&gt;setLanguagesSpoke() : void&lt;/div&gt;&lt;div&gt;setSecondaryAddress() : void&lt;/div&gt;&lt;div&gt;setAcceptedInsurance() : void&lt;/div&gt;&lt;div&gt;setNewPatients() : void&lt;/div&gt;&lt;div&gt;setSpecialization() : void&lt;/div&gt;&lt;div&gt;setURL() : void&lt;/div&gt;&lt;div&gt;setPrimaryPhone() : String&lt;/div&gt;&lt;div&gt;setSecondaryPhone() : String&lt;/div&gt;&lt;div&gt;setReviewAvg() : float&lt;/div&gt;&lt;div&gt;getNPI() : String&lt;/div&gt;&lt;div&gt;getEnumerationDate() : Date&lt;/div&gt;&lt;div&gt;getLanguagesSpoke() : String[]&lt;/div&gt;&lt;div&gt;getSecondaryAddress() : String&lt;/div&gt;&lt;div&gt;getSecondaryZip() : int&lt;/div&gt;&lt;div&gt;getPrimaryPhone() : String&lt;/div&gt;&lt;div&gt;getSecondaryPhone() : String&lt;/div&gt;&lt;div&gt;setReviewAvg() : float&lt;/div&gt;&lt;div&gt;setSpecialization() : String[]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="310" width="180" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="is a" vertex="1">
+          <mxGeometry height="30" width="60" x="432" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="is a" vertex="1">
+          <mxGeometry height="30" width="60" x="742" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-17" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Search" vertex="1">
+          <mxGeometry height="52" width="140" x="563" y="879" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-18" parent="TLL_v9ClbD_YXBTvD8V5-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="search() : Doctor[]" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-19" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Filter" vertex="1">
+          <mxGeometry height="354" width="189" x="277" y="879" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-20" parent="TLL_v9ClbD_YXBTvD8V5-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;acceptsNewPatients : Boolean&lt;/div&gt;&lt;div&gt;insurance: String&lt;/div&gt;&lt;div&gt;languages: List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;specializations: List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;minReviewAvg: Float&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="189" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-21" parent="TLL_v9ClbD_YXBTvD8V5-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="189" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TLL_v9ClbD_YXBTvD8V5-22" parent="TLL_v9ClbD_YXBTvD8V5-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;getAcceptsNewPatients(): Boolean&lt;/div&gt;&lt;div&gt;setAcceptsNewPatients(): void&lt;/div&gt;&lt;div&gt;getInsurance(): String&lt;/div&gt;&lt;div&gt;setInsurance(): void&lt;/div&gt;&lt;div&gt;getLanguages(): List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;setLanguages():void&lt;/div&gt;&lt;div&gt;getSpecializations(): List&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;setSpecializations():void&lt;/div&gt;&lt;div&gt;getMinReviewAvg(): Float&lt;/div&gt;&lt;div&gt;setMinReviewAvg(): void&lt;/div&gt;&lt;div&gt;applyFilters(): boolean&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="226" width="189" y="128" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
