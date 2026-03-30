@@ -1,9 +1,6 @@
-package test;
-
 import static org.junit.Assert.*;
 import org.junit.Test;
-// Importing the Patient class to verify profile and insurance logic
-import Patient; 
+
 
 public class testPatient {
 
@@ -24,7 +21,7 @@ public class testPatient {
         String password = "securePassword123";
 
         // Create Patient object
-        Patient testPatient = new Patient(firstName, middleInitial, lastName, 
+        Patient testPatient = new Patient(firstName, middleInitial, lastName,
                                           age, sex, insurance, address, password);
 
         // Test inherited Person fields
@@ -43,11 +40,11 @@ public class testPatient {
      */
     @Test
     public void testSetInsurance() {
-        Patient testPatient = new Patient("John", 'M', "Smith", 35, 'M', 
+        Patient testPatient = new Patient("John", 'M', "Smith", 35, 'M',
                                           "Aetna", "Address", "pass");
-        
+
         testPatient.setInsurance("UnitedHealth");
-        assertEquals("Insurance should be updated to UnitedHealth", 
+        assertEquals("Insurance should be updated to UnitedHealth",
                      "UnitedHealth", testPatient.getInsurance());
-    }
-}
+    }}
+
