@@ -126,7 +126,7 @@ public class Main {
                                         // Secondary address
                                         if (d.getSecondaryAddress() != null) {
                                             Distance distSecondary = new Distance(
-                                                    patient.getZip(patientZip),
+                                                    patientZip,
                                                     d.getZip(d.getSecondaryAddress())
                                             );
                                             double milesSecondary = distSecondary.calculateHaversine();
