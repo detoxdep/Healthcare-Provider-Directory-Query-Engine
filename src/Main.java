@@ -41,13 +41,13 @@ public class Main {
                         int insurance = scn.nextInt();
                         scn.nextLine(); // consume newline
                         switch (insurance) {
-                            case 1 -> insuranceProvider = "Aetna";
-                            case 2 -> insuranceProvider = "BlueCross";
-                            case 3 -> insuranceProvider = "Cigna";
-                            case 4 -> insuranceProvider = "Humana";
-                            case 5 -> insuranceProvider = "Kaiser";
-                            case 6 -> insuranceProvider = "UnitedHealth";
-                            default -> System.out.println("Invalid Option.");
+                            case 1 : insuranceProvider = "Aetna";
+                            case 2 : insuranceProvider = "BlueCross";
+                            case 3 : insuranceProvider = "Cigna";
+                            case 4 : insuranceProvider = "Humana";
+                            case 5 : insuranceProvider = "Kaiser";
+                            case 6 : insuranceProvider = "UnitedHealth";
+                            default : System.out.println("Invalid Option.");
                         }
                         if (insuranceProvider != null) {
                             System.out.println("Provider Set As: " + insuranceProvider);
