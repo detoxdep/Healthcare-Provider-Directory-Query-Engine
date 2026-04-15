@@ -1,13 +1,5 @@
-<<<<<<< HEAD:src/main/java/com/example/Distance.java
-package com.example;
-// This whole file is a iteration 2 kind of problem
-public class Distance {
-    String patientZip;
-    String doctorZip;
-=======
 import java.io.File;
 import java.util.Scanner;
->>>>>>> ecc70172dc4af08a09d1c3528dd8d3e759eea52a:src/Distance.java
 
 public class Distance {
     private String patientZip;
@@ -25,7 +17,7 @@ public class Distance {
     public double[] convertLatLong(String zipCode) {
         double[] latLong = new double[2];
         // Path to your ZIP database
-        File file = new File("src/main/resources/florida_zipcodes.csv");
+        File file = new File("florida_zipcodes.csv");
 
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
