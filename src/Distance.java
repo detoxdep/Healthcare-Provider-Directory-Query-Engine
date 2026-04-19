@@ -14,27 +14,45 @@ public class Distance {
      * Scans the florida_zipcodes.csv to find latitude and longitude.
      * Assumes CSV format: zip, latitude, longitude
      */
-    public double[] convertLatLong(String zipCode) {
-        double[] latLong = new double[2];
-        // Path to your ZIP database
-        File file = new File("src/main/resources/florida_zipcodes.csv");
+	public double[] convertLatLong(String zipCode) {
+    if (zipCode == null || zipCode.isEmpty()) return null;
 
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] parts = line.split(",");
-                if (parts[0].trim().equals(zipCode.trim())) {
-                    latLong[0] = Double.parseDouble(parts[1]); // Latitude
-                    latLong[1] = Double.parseDouble(parts[2]); // Longitude
-                    return latLong;
+    double[] latLong = new double[2];
+    File file = new File("src/main/resources/florida_zipcodes.csv");
+
+    try (Scanner scanner = new Scanner(file)) {
+        // 1. Skip the header line entirely
+        if (scanner.hasNextLine()) {
+            scanner.nextLine(); 
+        }
+
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            // 2. Use a limit in split to avoid over-processing the massive line
+            String[] parts = line.split(",");
+
+            // 3. Ensure the line actually has enough data
+            if (parts.length >= 3) {
+                String currentZip = parts[0].trim();
+                
+                if (currentZip.equals(zipCode.trim())) {
+                    try {
+                        // parts[1] is lat, parts[2] is lng
+                        latLong[0] = Double.parseDouble(parts[1].trim()); 
+                        latLong[1] = Double.parseDouble(parts[2].trim());
+                        return latLong;
+                    } catch (NumberFormatException e) {
+                        // This handles cases where lat/long might be malformed text
+                        continue; 
+                    }
                 }
             }
-        } catch (Exception e) {
-            System.out.println("Error reading ZIP database: " + e.getMessage());
         }
-        return null; // Return null if ZIP not found
+    } catch (Exception e) {
+        System.out.println("Error reading ZIP database: " + e.getMessage());
     }
-
+    return null;
+}
     /**
      * Calculates distance in miles using the Haversine formula.
      */
