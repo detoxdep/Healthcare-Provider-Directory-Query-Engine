@@ -14,7 +14,7 @@ public class Search {
 
     public static ArrayList<Doctor> search(){
 
-        Path fileName = Paths.get("../random_doctors_florida_zipcodes.csv");
+        Path fileName = Paths.get("random_doctors_florida_zipcodes.csv");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try(BufferedReader reader = Files.newBufferedReader(fileName)){
@@ -44,7 +44,7 @@ public class Search {
                             tokens[2],                  
                             Integer.parseInt(tokens[3]),
                             tokens[4].charAt(0),       
-                            tokens[2],                
+                            tokens[6],                
                             enumerationDate,            
                             tokens[8].split(";"),      
                             tokens[9].split(";"),      

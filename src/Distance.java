@@ -5,7 +5,7 @@ public class Distance {
     private String patientZip;
     private String doctorZip;
     // Updated path to be more flexible or match standard project structures
-    private static final String FILE_PATH = "../florida_zipcodes.csv";
+    private static final String FILE_PATH = "florida_zipcodes.csv";
 
     public Distance(String patientZip, String doctorZip) {
         this.patientZip = patientZip;
