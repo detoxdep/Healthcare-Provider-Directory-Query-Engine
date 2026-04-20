@@ -3,5 +3,8 @@
         "src"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.referencedLibraries": [
+        "C:/javafx-sdk-26/lib/*.jar"
+    ]
 }

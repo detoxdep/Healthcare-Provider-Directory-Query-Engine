@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+    
         Scanner scn = new Scanner(System.in);
 
         boolean flag = true;
@@ -18,6 +19,7 @@ public class Main {
 
         // Basic Menu
         while (flag) {
+            
             System.out.println("----- MAIN MENU -----");
             System.out.println("1. Provide Insurance Information");
             System.out.println("2. Search Doctors");
