@@ -64,6 +64,7 @@ public class Main {
                         }
 
                         Filter filter = new Filter();
+			filter.setInsurance(insuranceProvider);
                         Integer maxDistance = null;
                         boolean inFilterMenu = true;
 
@@ -113,8 +114,10 @@ public class Main {
 
                                 case "6":
                                     System.out.println("\nSearching doctors...\n");
+				    System.out.println("Total doctors in list: " + doctors.size());
                                     for (Doctor d : doctors) {
-                                        // Primary address
+                                       // System.out.println("Found: " + d.getLastName());
+					// Primary address
                                         if (d.getPrimaryAddress() != null) {
                                             Distance distPrimary = new Distance(
                                                     patientZip,
