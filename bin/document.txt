@@ -1,0 +1,59 @@
+CEN4010 – Iteration 2 Submission: System Implementation & Documentation Team: G19
+
+Date: March 2026
+
+I. SYSTEM OVERVIEW & FEATURES
+The following features have been implemented and verified for the v1.0 Integrated Release:
+
+Physician Dataset Integration: Successfully parses random_doctors_florida_zipcodes.csv into a high-performance ArrayList<Doctor>.
+
+Geospatial Logic (Distance.java): Implemented the mathematical logic to calculate distances between user ZIP codes and provider locations.
+
+Advanced Data Tokenization (Search.java): Uses Regex-based parsing to handle complex CSV fields, such as semicolon-separated insurance lists and specialization arrays.
+
+Insurance & Proximity Filtering: A multi-tier search function that filters the database by both compatible insurance and maximum search radius.
+
+Persistence: Successfully implements saved_search.csv for exporting filtered results.
+
+II. FILE STRUCTURE & MODULAR RESPONSIBILITY
+The repository is organized into a clean Maven-style structure for scalability:
+
+src/: Contains core logic classes (Person, Doctor, Patient, Search, Distance, Main).
+
+test/: Contains a comprehensive JUnit 4 test suite mirroring the source files.
+
+Visual Documentation:
+
+UML.drawio: Visualizes the class hierarchy and inheritance.
+
+LoadSequence.png & FilterSequence.png: Trace diagrams for system logic.
+
+Build & Metadata: pom.xml for dependency management and .gitignore for repository hygiene.
+
+III. DESIGN QUALITY & PROGRAMMING STYLE
+
+Inheritance: A base Person class encapsulates shared attributes, while Doctor and Patient extend it to handle role-specific data.
+
+Encapsulation: All attributes are private, with data access strictly managed through public Getter/Setter methods.
+
+Naming Conventions: Strict adherence to Java camelCase and PascalCase (e.g., calculateDistance, testSearch).
+
+Code Scalability: Methods are kept concise (under 40 lines) to ensure the search loop remains performant.
+
+IV. INSTRUCTIONS: HOW TO RUN THE SYSTEM
+
+Prerequisites: JDK 11+ and the JUnit 4 library.
+
+Compilation: Open the project in Eclipse or use the terminal: javac -d bin src/*.java test/*.java.
+
+Execution: Run the Main.java file to launch the interactive terminal UI.
+
+Unit Testing: In Eclipse, right-click the test package and select Run As > JUnit Test to verify the Green Bar status across all 6 test files.
+
+V. TEST CASE TRACEABILITY
+
+testSearch.java / testFilter.java: Validates CSV loading, dataset size, and insurance filtering accuracy.
+
+testDistance.java: Verifies the mathematical precision of coordinate-based calculations.
+
+testPerson.java / testDoctor.java / testPatient.java: Ensures inheritance, password storage, and attribute encapsulation work as intended.
