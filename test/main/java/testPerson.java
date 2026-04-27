@@ -1,5 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 public class testPerson {
@@ -18,7 +18,7 @@ public class testPerson {
         Person testPerson = new Person("Roger", 'A', "Arias", 25, 'M', address);
 
         int expectedZip = 34205;
-        int actualZip = testPerson.getZip(address);
+        int actualZip = Integer.parseInt(testPerson.getZip(address));
 
         assertEquals(expectedZip, actualZip, "The ZIP code should be correctly extracted as 34205");
     }

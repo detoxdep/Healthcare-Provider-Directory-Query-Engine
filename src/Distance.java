@@ -32,10 +32,10 @@ public class Distance {
                 String[] parts = line.split(",");
                 
                 if (parts.length >= 3) {
-                    String csvZip = parts[0].trim();
+                    String csvZip = parts[0].trim().replace("\"", "");
                     if (csvZip.equals(zipCode.trim())) {
-                        double lat = Double.parseDouble(parts[1].trim());
-                        double lon = Double.parseDouble(parts[2].trim());
+                        double lat = Double.parseDouble(parts[1].trim().replace("\"", ""));
+                        double lon = Double.parseDouble(parts[2].trim().replace("\"", ""));
                         return new double[]{lat, lon};
                     }
                 }

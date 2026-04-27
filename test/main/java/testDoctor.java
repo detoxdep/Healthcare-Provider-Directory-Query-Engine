@@ -1,5 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*; // JUnit 5
-import org.junit.Test; // Note: If using JUnit 5 completely, this should be org.junit.jupiter.api.Test
+import org.junit.jupiter.api.Test; // Note: If using JUnit 5 completely, this should be org.junit.jupiter.api.Test
 import java.util.Date; // Added this!
 
 public class testDoctor {

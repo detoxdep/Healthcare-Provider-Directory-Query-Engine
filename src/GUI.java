@@ -137,6 +137,7 @@ public class GUI extends Application {
             boolean matched = false;
 
             // Primary address
+
             if (d.getPrimaryAddress() != null) {
                 Distance dist = new Distance(patientZip, d.getZip(d.getPrimaryAddress()));
                 double miles = dist.calculateHaversine();
@@ -156,6 +157,7 @@ public class GUI extends Application {
                     resultsBox.getChildren().add(makeDoctorCard(d, miles, "Secondary"));
                 }
             }
+
         }
 
         ScrollPane scroll = new ScrollPane(resultsBox);
@@ -174,15 +176,25 @@ public class GUI extends Application {
     private HBox makeDoctorCard(Doctor d, double miles, String addrType) {
         VBox box = new VBox(5);
 
+        String distanceText;
+
+        if(miles == -1) {
+            distanceText = "Distance: ZIP code not found";
+        } else {
+            distanceText = String.format("Distance(%s): %.2fmiles", addrType, miles);
+        }
+
+
         Label name = new Label(d.getFirstName() + " " + d.getLastName());
         name.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
 
         Label spec = new Label("Specializations: " + String.join(", ", d.getSpecialization()));
         Label lang = new Label("Languages: " + String.join(", ", d.getLanguagesSpoke()));
         Label rev = new Label("Review Avg: " + d.getReviewAvg());
-        Label dist = new Label("Distance (" + addrType + "): " + (int)miles + " miles");
+       // Label dist = new Label("Distance (" + addrType + "): " + (int)miles + " miles");
+        Label distLabel = new Label(distanceText);
 
-        box.getChildren().addAll(name, spec, lang, rev, dist);
+        box.getChildren().addAll(name, spec, lang, rev, distLabel);
         box.setPadding(new Insets(10));
         box.setStyle("-fx-border-color: black; -fx-border-radius: 5;");
 
