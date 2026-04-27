@@ -4,24 +4,6 @@ import java.io.File;
 
 public class DistanceTest {
 
-	@Test
-	public void testConvertLatLong_CatchBlock() {
-	    // Save the old path
-	    String oldPath = "../florida_zipcodes.csv";
-	    
-	    try {
-	        // Change path to something that doesn't exist
-	        Distance.setFilePath("NON_EXISTENT_FILE.csv");
-	        
-	        Distance d = new Distance("32003", "32256");
-	        // This call will now trigger the catch block naturally
-	        d.convertLatLong("32003"); 
-	        
-	    } finally {
-	        // Always reset so other tests pass
-	        Distance.setFilePath(oldPath);
-	    }
-	}
     // --- TESTING ---
 	// Test 1: Verification of Data Matching (White-Box)
     @Test

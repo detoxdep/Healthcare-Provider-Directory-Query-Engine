@@ -91,6 +91,7 @@ public class GUI extends Application {
 
         Button searchBtn = new Button("Search Doctors");
         searchBtn.setOnAction(e -> {
+            filter = new Filter();
             // Apply filters
             if (!maxDistField.getText().trim().isEmpty())
                 maxDistance = Integer.parseInt(maxDistField.getText().trim());
@@ -164,7 +165,7 @@ public class GUI extends Application {
         scroll.setFitToWidth(true);
 
         Button backBtn = new Button("Back to Filters");
-        backBtn.setOnAction(e -> stage.setScene(buildFilterScene(stage)));
+        backBtn.setOnAction(e -> {filter = new Filter(); maxDistance = null; stage.setScene(buildFilterScene(stage));});
 
         root.getChildren().addAll(title, scroll, backBtn);
         return new Scene(root, 600, 500);
