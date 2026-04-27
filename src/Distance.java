@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Distance {
     private String patientZip;
     private String doctorZip;
+    // Updated path to be more flexible or match standard project structures
+    private static final String FILE_PATH = "florida_zipcodes.csv";
 
     public Distance(String patientZip, String doctorZip) {
         this.patientZip = patientZip;
@@ -12,51 +14,47 @@ public class Distance {
 
     /**
      * Scans the florida_zipcodes.csv to find latitude and longitude.
-     * Assumes CSV format: zip, latitude, longitude
+     * Skips the header row and matches the ZIP code.
      */
-	public double[] convertLatLong(String zipCode) {
-    if (zipCode == null || zipCode.isEmpty()) return null;
+    public double[] convertLatLong(String zipCode) {
+        if (zipCode == null || zipCode.isEmpty()) return null;
 
-    double[] latLong = new double[2];
-    File file = new File("src/main/resources/florida_zipcodes.csv");
+        File file = new File(FILE_PATH);
+        try (Scanner scanner = new Scanner(file)) {
+            // SKIP HEADER: Checks if there is a line and consumes it
+            if (scanner.hasNextLine()) {
+                scanner.nextLine(); 
+            }
 
-    try (Scanner scanner = new Scanner(file)) {
-        // 1. Skip the header line entirely
-        if (scanner.hasNextLine()) {
-            scanner.nextLine(); 
-        }
-
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            // 2. Use a limit in split to avoid over-processing the massive line
-            String[] parts = line.split(",");
-
-            // 3. Ensure the line actually has enough data
-            if (parts.length >= 3) {
-                String currentZip = parts[0].trim();
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                // Split by comma, but handle potential spaces
+                String[] parts = line.split(",");
                 
-                if (currentZip.equals(zipCode.trim())) {
-                    try {
-                        // parts[1] is lat, parts[2] is lng
-                        latLong[0] = Double.parseDouble(parts[1].trim()); 
-                        latLong[1] = Double.parseDouble(parts[2].trim());
-                        return latLong;
-                    } catch (NumberFormatException e) {
-                        // This handles cases where lat/long might be malformed text
-                        continue; 
+                if (parts.length >= 3) {
+                    String csvZip = parts[0].trim();
+                    if (csvZip.equals(zipCode.trim())) {
+                        double lat = Double.parseDouble(parts[1].trim());
+                        double lon = Double.parseDouble(parts[2].trim());
+                        return new double[]{lat, lon};
                     }
                 }
             }
+        } catch (Exception e) {
+            System.err.println("Error reading ZIP database: " + e.getMessage());
         }
-    } catch (Exception e) {
-        System.out.println("Error reading ZIP database: " + e.getMessage());
+        return null; 
     }
-    return null;
-}
+
     /**
      * Calculates distance in miles using the Haversine formula.
      */
     public double calculateHaversine() {
+        // Validation: if either ZIP is missing, we can't calculate
+        if (patientZip == null || doctorZip == null) {
+            return -1;
+        }
+
         double[] pCoords = convertLatLong(this.patientZip);
         double[] dCoords = convertLatLong(this.doctorZip);
 
@@ -76,6 +74,6 @@ public class Distance {
                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
 
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return R * c; // Distance in miles
+        return R * c; 
     }
 }

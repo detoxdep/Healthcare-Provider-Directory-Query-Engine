@@ -53,9 +53,9 @@ public String getPrimaryAddress() {
 public void setPrimaryAddress(String primaryAddress) {
     this.primaryAddress = primaryAddress;
 }
-public int getZip(String address){
+public String getZip(String address){
     String zipToken = address.replaceAll("\"", "").trim();   
-return Integer.parseInt(zipToken.replaceAll(".*?(\\d{5}).*$", "$1"));  
+return zipToken.replaceAll(".*?(\\d{5}).*$", "$1");  
     }
 
 

@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch GUI",
+            "request": "launch",
+            "mainClass": "GUI",
+            "vmArgs": "--module-path C:/javafx-sdk-26/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main (Console Version)",
+            "request": "launch",
+            "mainClass": "Main"
+        }
+    ]
+}

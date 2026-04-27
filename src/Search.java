@@ -21,6 +21,7 @@ public class Search {
             String line;
             reader.readLine();
             while ((line = reader.readLine()) != null){
+		//System.out.println("Reading Line:" + line); // DEBUG
                 // tokenize to pass 
                   String[] tokens = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
@@ -43,7 +44,7 @@ public class Search {
                             tokens[2],                  
                             Integer.parseInt(tokens[3]),
                             tokens[4].charAt(0),       
-                            tokens[2],                
+                            tokens[6],                
                             enumerationDate,            
                             tokens[8].split(";"),      
                             tokens[9].split(";"),      
@@ -71,4 +72,3 @@ public class Search {
     }
 
     
-
