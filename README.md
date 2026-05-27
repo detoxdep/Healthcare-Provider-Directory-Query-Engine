@@ -1,6 +1,5 @@
 ==============================================================================
 FLORIDA-BASED PRIMARY CARE PHYSICIAN & SPECIALIST SEARCH TOOL
-PROJECT README (SUBMISSION FORMAT: README.txt)
 Course: CEN 4010 - Software Engineering (Spring 2026)
 University of North Florida — School of Computing
 ==============================================================================
